@@ -9,33 +9,50 @@
             "type": "cppdbg",
             "request": "launch",
             "preLaunchTask": "gdb-debug", 
-            "postDebugTask": "stop emulation",
-            "serverLaunchTimeout": 10000,
+            // "postDebugTask": "stop emulation",
+            "serverLaunchTimeout": "20000",
             "stopAtEntry": true,
-            "program": "${workspaceFolder}/${workspaceFolderBasename}.elf",
+            // "program": "${workspaceFolder}/${workspaceFolderBasename}.elf",
+            "program": "${workspaceRoot}/basic.elf",
             "MIMode": "gdb",
             "externalConsole": true,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceRoot}",
             "targetArchitecture": "arm",
             "miDebuggerServerAddress": "localhost:2345",
-            "windows": {
-                "miDebuggerPath": "C:/devkitPro/devkitARM/bin/arm-none-eabi-gdb.exe",
-                "setupCommands": [
+            "miDebuggerPath": "C:/devkitPro/devkitARM/bin/arm-none-eabi-gdb.exe",
+            "setupCommands": [
                     {
                     "description": "Enable pretty-printing for gdb",
                     "ignoreFailures": true,
-                        "text": "file ${workspaceFolder}/${workspaceFolderBasename}.elf -enable-pretty-printing"
-                    }]
-            },
-            "osx":{
-                "miDebuggerPath": "/opt/devkitPro/devkitARM/bin/arm-none-eabi-gdb",
-                "setupCommands": [
-                    {
-                    "description": "Enable pretty-printing for gdb",
-                    "ignoreFailures": true,
-                        "text": "file ${workspaceFolder}/${workspaceFolderBasename}.elf -enable-pretty-printing"
-                    }]
-            },
-        }
+                    "text": "file D:/Github/GBA/basic/basic.elf -enable-pretty-printing"
+                    }
+                ]
+            }
     ]
 }
+
+
+/////////////
+
+
+// "windows": {
+//     "miDebuggerPath": "C:/devkitPro/devkitARM/bin/arm-none-eabi-gdb.exe",
+//     "setupCommands": [
+//         {
+//         "description": "Enable pretty-printing for gdb",
+//         "ignoreFailures": true,
+//             "text": "file ${workspaceFolder}/${workspaceFolderBasename}.elf -enable-pretty-printing"
+//         }]
+// },
+// "osx":{
+//     "miDebuggerPath": "/opt/devkitPro/devkitARM/bin/arm-none-eabi-gdb",
+//     "setupCommands": [
+//         {
+//         "description": "Enable pretty-printing for gdb",
+//         "ignoreFailures": true,
+//             "text": "file ${workspaceFolder}/${workspaceFolderBasename}.elf -enable-pretty-printing"
+//         }]
+// },
+// }
+// ]
+// }

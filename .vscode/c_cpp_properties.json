@@ -53,6 +53,7 @@
             "includePath": [
                 "${workspaceFolder}",
                 "${workspaceFolder}/include",
+                "./include",
                 "E:/devkitPro/devkitARM/arm-none-eabi/include",
                 "E:/devkitPro/devkitARM/lib/gcc/arm-none-eabi/8.1.0/include"
             ],
